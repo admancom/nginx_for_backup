@@ -10,11 +10,11 @@ RUN chmod 644 /etc/nginx/nginx.conf
 
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
-COPY html-directory /var/www/html
+#COPY html-directory /var/www/html
 COPY entrypoint.sh /usr/local/bin/
 
 
-ENV DOMEN=khtoolu.ru \
+ENV DOMEN=domen.ru \
     TZ=UTC
 
 
