@@ -2,7 +2,7 @@ FROM alpine:3.17
 #COPY html-directory /usr/share/nginx/html
 
 RUN apk add --update python3 py3-pip nginx 
-RUN pip install certbot-nginx
+RUN pip install --root-user-action=ignore certbot-nginx
 RUN apk add --no-cache tini
 
 ADD nginx.conf /etc/nginx/nginx.conf
